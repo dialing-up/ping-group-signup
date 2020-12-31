@@ -8,16 +8,18 @@
     <title>Tailwind CSS Demo</title>
 </head>
 <body class="bg-gradient-to-r from-red-400 to-yellow-400">
-   <div class="mx-auto mt-3 divide-y divide-black shadow-xl rounded-lg bg-white max-w-md px-5 pl-5 pr-5 pb-1 text-center">
-        <img src="logo.png" alt="Neoliberal Project">
-        <div class="font-light text-xl">Ping Groups Signup</div>
-    </div>
+    <nav class="fixed w-full z-10 top-0">
+        <div class="flex mx-auto divide-x divide-black shadow-xl rounded-b-lg bg-white max-w-md p-1 justify-center items-center">
+            <a href="https://neoliberalproject.org/"><img src="logo.png" alt="Neoliberal Project" width=200 height=25 class="p-1"></a>
+            <div class="font-light text-xl p-1">Ping Groups Signup</div>
+        </div>
+    </nav>
  <!--   <div class="mx-auto mt-3 font-normal italic max-w-2xl p-2 bg-white rounded-lg shadow-xl">For the American comic strip <span class="not-italic">Mixed Media</span>, see Jack Ohman.</div>-->
-    <div class="flex justify-center h-max relative">
+    <div class="flex justify-center h-max relative pt-20">
         <div>
             <div class="p-2 bg-white rounded-lg shadow-xl m-2 max-w-5xl" id="countrybox">
                 <div class="font-thin text-xl pl-4">
-                    (If not from the United States) <span class="font-medium">Country,Region or Continent</span>
+                    (If not from the United States) <span class="font-medium">Country, Region or Continent</span>
                 </div>
                 <div id="countries" class="flex flex-wrap justify-center"></div>
             </div>
