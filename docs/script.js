@@ -1,5 +1,3 @@
-const axios = require('axios');
-
 let games = {
     AMONG_US: "Among Us",
     ANIMAL_CROSSING:"Animal Crossing",
