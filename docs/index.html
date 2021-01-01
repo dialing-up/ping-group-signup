@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script type="module">
+        import axios from 'https://cdn.skypack.dev/axios?min';
+    </script>
     <script src="script.js"></script>
-    <title>Tailwind CSS Demo</title>
+    <title>Ping Groups Signup</title>
 </head>
+<!--window.location.replace("http://www.w3schools.com");-->
 <body class="bg-gradient-to-r from-red-400 to-yellow-400">
     <nav class="fixed w-full z-10 top-0">
         <div class="flex mx-auto divide-x divide-black shadow-xl rounded-b-lg bg-white max-w-min sm:max-w-md p-1 justify-center items-center">
             <a href="https://neoliberalproject.org/"><img src="logo.png" alt="Neoliberal Project" id="logo" class="p-1"></a>
-            <div class="font-light sm:text-xl text-lg p-1 mr-1 whitespace-nowrap text-center">Ping Groups <br class="sm:hidden">Signup</div>
+            <div class="font-light sm:text-xl text-lg p-1 mr-1 whitespace-nowrap text-center">Ping Groups<span class="hidden sm:inline">&nbsp;</span><br class="sm:hidden">Signup</div>
         </div>
     </nav>
- <!--   <div class="mx-auto mt-3 font-normal italic max-w-2xl p-2 bg-white rounded-lg shadow-xl">For the American comic strip <span class="not-italic">Mixed Media</span>, see Jack Ohman.</div>-->
     <div class="flex justify-center h-max relative pt-20">
         <div>
             <div class="p-2 bg-white rounded-lg shadow-xl m-2 max-w-5xl" id="countrybox">
@@ -47,8 +50,12 @@
                 </div>
                 <div id="games"></div>
             </div>
-       </div>
+        </div>  
     </div>
+    <div class="mx-auto w-max mb-2"><button class="btn_red" onclick="submit()">Submit</button></div>
+    <div class="mx-auto w-max mb-2"><a class="btn_red" href="
+        https://www.reddit.com/api/v1/authorize.compact?client_id=a5B2-eDepQJCuA&response_type=token&state=Q46gsRts&redirect_uri=https://dialing-up.github.io/ping-group-signup/&duration=temporary&scope=privatemessages%20identity
+        ">Signup</a></div>
     <footer class="w-full">
         <div class="bg-white text-center justify-center items-center p-5 mx-auto shadow-xl rounded-t-lg sm:max-w-sm max-w-min whitespace-nowrap">
         Made by <a href="https://twitter.com/ReadyToDial" class="font-semibold text-red-500">@ReadyToDial</a> with <a href="https://tailwindcss.com/" class="font-semibold text-blue-600">Tailwind CSS</a>
