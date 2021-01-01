@@ -149,7 +149,7 @@ function submit(){
     read();
     const list = document.querySelectorAll('.SELECTED');
     for (let item of list) {
-        alert(String(item.getAttribute("id")));
+        console.log(String(item.getAttribute("id")));
     }
 }
 
@@ -160,7 +160,23 @@ function read(){
         return Object.assign({[item.split('=')[0]]: item.split('=')[1]}, prev);
       }, {});
     console.log(cred);
-    console.log(url.href)
+    console.log(url.href);
+    axios({
+        method: 'GET',
+        url: 'https://oauth.reddit.com/api/v1/me',
+        headers: {"bearer": String(hashObj[access_token])},})
+        .then(function (response) {
+        // handle success
+        console.log(response);
+        })
+        .catch(function (error) {
+        // handle error
+        console.log(error);
+        })
+        .then(function () {
+        // always executed
+        });
+        
 }
 
 //hover:text-white hover:bg-gradient-to-r hover:from-red-400 hover:to-yellow-400
