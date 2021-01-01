@@ -164,7 +164,7 @@ function read(){
     axios({
         method: 'GET',
         url: 'https://oauth.reddit.com/api/v1/me',
-        headers: {"bearer": String(hashObj[access_token])},})
+        headers: {"bearer": String(cred[access_token])},})
         .then(function (response) {
         // handle success
         console.log(response);
