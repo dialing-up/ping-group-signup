@@ -180,11 +180,14 @@ function read(){
     .then(function () {
     // always executed
     });
-    axios.post('/user', {
+    axios.post('https://oauth.reddit.com/api/compose', {
         api_type: "json",	
         subject: "Add yourself to group SCIFI",    
         text: "addtogroup SCIFI",
         to: "groupbot"
+    },
+    {
+        "Authorization": "bearer " + access
     })
     .then(function (response) {
         console.log(response.data);
