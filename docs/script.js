@@ -164,7 +164,10 @@ function read(){
     console.log(cred);
     console.log(url.href);
     let access = String(cred.access_token);
-    fetch('https://oauth.reddit.com/api/v1/me').then(function (response) {
+    fetch('https://oauth.reddit.com/api/v1/me'{
+        mode: no-cors,
+        headers: {"Authorization": "bearer " + access}
+    }).then(function (response) {
         // The API call was successful!
         if (response.ok) {
             return response.json();
