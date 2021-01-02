@@ -162,11 +162,10 @@ function read(){
         return Object.assign({[item.split('=')[0]]: item.split('=')[1]}, prev);
       }, {});
     console.log(cred);
-    console.log(url.href);
     let access = String(cred.access_token);
     fetch('https://oauth.reddit.com/api/v1/me',{
-        mode: no-cors,
-        headers: {"Authorization": "bearer " + access}
+        mode: "cors",
+        headers: {"Authorization": "bearer " + access }
     }).then(function (response) {
         // The API call was successful!
         if (response.ok) {
@@ -177,6 +176,31 @@ function read(){
     }).then(function (data) {
         // This is the JSON from our response
         console.log(data.name);
+    }).catch(function (err) {
+        // There was an error
+        console.warn('Something went wrong.', err);
+    });
+    let message ={
+        api_type: "json",
+        subject: "ADD yourself to group SCIFI",
+        text: "addtogroup SCIFI",
+        to: "groupbot"
+    };
+     fetch('https://oauth.reddit.com/api/compose',{
+        method: "POST",
+        mode: "cors",
+        body: JSON.stringify(message),
+        headers: {"Authorization": "bearer " + access }
+    }).then(function (response) {
+        // The API call was successful!
+        if (response.ok) {
+            return response.json();
+        } else {
+            return Promise.reject(response);
+        }
+    }).then(function (data) {
+        // This is the JSON from our response
+        console.log(data);
     }).catch(function (err) {
         // There was an error
         console.warn('Something went wrong.', err);
