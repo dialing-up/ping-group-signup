@@ -161,7 +161,7 @@ function read(){
       }, {});
     console.log(cred);
     console.log(url.href);
-    let access = String(cred[access_token]);
+    let access = String(cred.access_token);
     axios({
         method: 'GET',
         url: 'https://oauth.reddit.com/api/v1/me',
