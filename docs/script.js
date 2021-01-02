@@ -106,10 +106,13 @@ let statelist = {
     USA_WI:	"Wisconsin"
 }
 
+//
+
 function cardCloud(id, list, cardstyle){
     for(let key in list){
         let node = document.createElement("div");
         node.className = String(cardstyle);
+        node.classList.add("select-none");
         node.setAttribute("id",String(key));
         node.setAttribute("onclick","clicker(this, '" + String(cardstyle) + "')");
         let image = document.createElement("img");
@@ -155,7 +158,6 @@ function submit(){
 
 function read(){
     const url = new URL(window.location.href);
-    /*url.searchParams.forEach((value, key) => console.log(value, key));*/
     const cred = url.hash.replace('#', '').split('&').reduce((prev, item) => {
         return Object.assign({[item.split('=')[0]]: item.split('=')[1]}, prev);
       }, {});
@@ -177,6 +179,18 @@ function read(){
     })
     .then(function () {
     // always executed
+    });
+    axios.post('/user', {
+        api_type: "json",	
+        subject: "Add yourself to group SCIFI",    
+        text: "addtogroup SCIFI",
+        to: "groupbot"
+    })
+    .then(function (response) {
+        console.log(response.data);
+    })
+    .catch(function (error) {
+        console.log(error);
     });
         
 }
