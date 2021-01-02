@@ -164,9 +164,22 @@ function read(){
     console.log(cred);
     console.log(url.href);
     let access = String(cred.access_token);
-    axios({
+    fetch('https://oauth.reddit.com/api/v1/me').then(function (response) {
+        // The API call was successful!
+        if (response.ok) {
+            return response.json();
+        } else {
+            return Promise.reject(response);
+        }
+    }).then(function (data) {
+        // This is the JSON from our response
+        console.log(data.name);
+    }).catch(function (err) {
+        // There was an error
+        console.warn('Something went wrong.', err);
+    });
+ /*   axios('https://oauth.reddit.com/api/v1/me',{
         method: 'GET',
-        url: 'https://oauth.reddit.com/api/v1/me',
         headers: {"Authorization": "bearer " + access}
     })
     .then(function (response) {
@@ -194,8 +207,7 @@ function read(){
     })
     .catch(function (error) {
         console.log(error);
-    });
-        
+    }); */    
 }
 
 //hover:text-white hover:bg-gradient-to-r hover:from-red-400 hover:to-yellow-400
