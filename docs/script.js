@@ -161,21 +161,23 @@ function read(){
       }, {});
     console.log(cred);
     console.log(url.href);
+    let access = String(cred[access_token]);
     axios({
         method: 'GET',
         url: 'https://oauth.reddit.com/api/v1/me',
-        headers: {"bearer": String(cred[access_token])},})
-        .then(function (response) {
-        // handle success
-        console.log(response);
-        })
-        .catch(function (error) {
-        // handle error
-        console.log(error);
-        })
-        .then(function () {
-        // always executed
-        });
+        headers: {"Authorization": "bearer " + access}
+    })
+    .then(function (response) {
+    // handle success
+    console.log(response);
+    })
+    .catch(function (error) {
+    // handle error
+    console.log(error);
+    })
+    .then(function () {
+    // always executed
+    });
         
 }
 
