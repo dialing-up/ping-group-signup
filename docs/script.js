@@ -184,7 +184,9 @@ function read(){
         // There was an error
         console.warn('Something went wrong.', err);
     });
-    //POST
+}
+
+function post(){
     let message ={
         api_type: "json",
         subject: "ADD yourself to group SCI-FI",
@@ -212,7 +214,11 @@ function read(){
     }).catch(function (err) {
         // There was an error
         console.warn('Something went wrong.', err);
-    });
+    });   
+}
+
+//hover:text-white hover:bg-gradient-to-r hover:from-red-400 hover:to-yellow-400
+
  /*   axios('https://oauth.reddit.com/api/v1/me',{
         method: 'GET',
         headers: {"Authorization": "bearer " + access}
@@ -242,10 +248,7 @@ function read(){
     })
     .catch(function (error) {
         console.log(error);
-    }); */    
-}
-
-//hover:text-white hover:bg-gradient-to-r hover:from-red-400 hover:to-yellow-400
+    }); */ 
 
 /*  
 
