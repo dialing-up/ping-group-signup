@@ -1,3 +1,5 @@
+// object lists of all ping groups
+
 let games = {
     AMONG_US: "Among Us",
     ANIMAL_CROSSING:"Animal Crossing",
@@ -27,12 +29,13 @@ let general ={
     HORROR: "😱 Horror",
     READING: "📚 Reading",
     MOVIES: "📽️ Movies",
-    SCIFI: "🤖 Sci-Fi",
+    SCI_FI: "🤖 Sci-Fi",
     TV: "📺 TV",
     GAMING: "🎮 Gaming",
     WEEBS: "(✿◠‿◠) Anime and Manga",
     LGBT: "🏳️‍🌈 LGBT",
 };
+
 
 let school = {
     AI:"Artificial Intelligence",
@@ -106,13 +109,13 @@ let statelist = {
     USA_WI:	"Wisconsin"
 }
 
-//
+//functions
 
+//function to generate clickable cards with prictures
 function cardCloud(id, list, cardstyle){
     for(let key in list){
         let node = document.createElement("div");
         node.className = String(cardstyle);
-        node.classList.add("select-none");
         node.setAttribute("id",String(key));
         node.setAttribute("onclick","clicker(this, '" + String(cardstyle) + "')");
         let image = document.createElement("img");
@@ -120,16 +123,15 @@ function cardCloud(id, list, cardstyle){
         image.setAttribute('alt', String(list[key]));
         node.appendChild(image);
         let desc = document.createElement("p");
-        desc.className ="font-semibold text-lg text-center p-2";
+        desc.className ="font-semibold text-center py-2";
         desc.textContent = String(list[key]);
         node.appendChild(desc);
         document.getElementById(String(id)).appendChild(node);
     }
 }
 
-
+//function to generate pill clouds 
 function tagCloud(id, listed, btnstyle){
-    //var elem = document.getElementById(id);
     for(let key in listed){
         let node = document.createElement("button");
         node.className = String(btnstyle);
@@ -140,6 +142,7 @@ function tagCloud(id, listed, btnstyle){
     }
 }
 
+//function to toggle look of buttons when clicked and toggle the SELECTED class
 function clicker(id, style){
     let spec = String(style);
     let clicked = spec + "_clicked";
@@ -149,7 +152,7 @@ function clicker(id, style){
 }
 
 function submit(){
-    read();
+    //read();
     const list = document.querySelectorAll('.SELECTED');
     for (let item of list) {
         console.log(String(item.getAttribute("id")));
@@ -163,6 +166,7 @@ function read(){
       }, {});
     console.log(cred);
     let access = String(cred.access_token);
+    //get username
     fetch('https://oauth.reddit.com/api/v1/me',{
         mode: "cors",
         headers: {"Authorization": "bearer " + access }
@@ -180,16 +184,20 @@ function read(){
         // There was an error
         console.warn('Something went wrong.', err);
     });
+    //POST
     let message ={
         api_type: "json",
-        subject: "ADD yourself to group SCIFI",
-        text: "addtogroup SCIFI",
+        subject: "ADD yourself to group SCI-FI",
+        text: "addtogroup SCI-FI",
         to: "groupbot"
     };
-     fetch('https://oauth.reddit.com/api/compose',{
+    let query = ""
+    for (let d in message)
+         query += encodeURIComponent(d) + '=' + 
+            encodeURIComponent(message[d]) + '&'
+     fetch('https://oauth.reddit.com/api/compose?'+query,{
         method: "POST",
         mode: "cors",
-        body: JSON.stringify(message),
         headers: {"Authorization": "bearer " + access }
     }).then(function (response) {
         // The API call was successful!
