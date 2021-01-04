@@ -123,7 +123,7 @@ function cardCloud(id, list, cardstyle){
         image.setAttribute('alt', String(list[key]));
         node.appendChild(image);
         let desc = document.createElement("p");
-        desc.className ="font-semibold text-center py-2";
+        desc.className ="font-semibold text-xs sm:text-base text-center py-2";
         desc.textContent = String(list[key]);
         node.appendChild(desc);
         document.getElementById(String(id)).appendChild(node);
@@ -151,6 +151,13 @@ function clicker(id, style){
     id.classList.toggle("SELECTED");
 }
 
+const url = new URL(window.location.href);
+    const cred = url.hash.replace('#', '').split('&').reduce((prev, item) => {
+        return Object.assign({[item.split('=')[0]]: item.split('=')[1]}, prev);
+      }, {});
+    console.log(cred);
+    let access = String(cred.access_token);
+
 function submit(){
     //read();
     const list = document.querySelectorAll('.SELECTED');
@@ -160,12 +167,6 @@ function submit(){
 }
 
 function read(){
-    const url = new URL(window.location.href);
-    const cred = url.hash.replace('#', '').split('&').reduce((prev, item) => {
-        return Object.assign({[item.split('=')[0]]: item.split('=')[1]}, prev);
-      }, {});
-    console.log(cred);
-    let access = String(cred.access_token);
     //get username
     fetch('https://oauth.reddit.com/api/v1/me',{
         mode: "cors",
@@ -179,10 +180,13 @@ function read(){
         }
     }).then(function (data) {
         // This is the JSON from our response
-        console.log(data.name);
+        let node = document.getElementById("username");
+        node.textContent = "Hello, " + String(data.name);
     }).catch(function (err) {
         // There was an error
         console.warn('Something went wrong.', err);
+        let node = document.getElementById("username");
+        node.textContent = "Something went wrong";
     });
 }
 
