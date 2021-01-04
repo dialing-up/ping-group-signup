@@ -18,7 +18,7 @@
     </nav>
     <div class="flex justify-center h-max relative pt-20">
         <div>
-            <div class="p-2 bg-white rounded-lg shadow-xl m-2 max-w-5xl text-center font-thin text-xl" id="welcomebox">
+            <div class="p-2 bg-white rounded-lg shadow-xl m-2 max-w-5xl text-center font-mono text-xl" id="welcomebox">
                 <span id="username"></span>
             </div>
             <div class="p-2 bg-white rounded-lg shadow-xl m-2 max-w-5xl" id="countrybox">
@@ -57,16 +57,27 @@
         </div>  
     </div>
     <div class="flex justify-around">
+        <!-- component -->
+        <div class="bg-blue-100 border-l-4 border-blue-500 mb-2 p-4 hidden" id="alerted">
+            <p class="font-bold text-blue-800">Messaging GroupBot...</p>
+            <ul class="list-disc list-inside" id="submitlist">
+            </ul>
+        </div>
+    </div>
+    <div class="flex justify-around">
         <span class="inline-flex rounded-md shadow-sm mb-2">
-            <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent leading-6 font-medium rounded-md text-white bg-blue-400 transition ease-in-out duration-150 cursor-not-allowed" disabled>
-            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-            </svg>
-            Processing
+            <button id="exec" type="button" class="inline-flex items-center px-4 py-2 border border-transparent leading-6 font-medium rounded-md text-white bg-blue-400" onclick="submit()">
+                <img id="arrow" src="submit.svg" height="24px" width="24px" class="mr-2">
+                <svg id="processing" class="animate-spin -ml-1 mr-3 h-5 w-5 hidden text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <img id="finished" src="check.svg" height="24px" width="24px" class="mr-2 hidden">
+                <span id = "exectext">Submit</span>
             </button>
         </span>
-        </div>
+    </div>
+
     <footer class="w-full">
         <div class="bg-white text-center justify-center items-center p-5 mx-auto shadow-xl rounded-t-lg sm:max-w-sm max-w-min whitespace-nowrap">
         Made by <a href="https://twitter.com/ReadyToDial" class="font-semibold text-red-500">@ReadyToDial</a> with <a href="https://tailwindcss.com/" class="font-semibold text-blue-600">Tailwind CSS</a>
@@ -81,6 +92,7 @@
     cardCloud("states", statelist, "conbox");
 </script>
 <style>
+    /*transition ease-in-out duration-150 */
     .btn_red {
         @apply select-none py-2 px-4 m-1 bg-white text-red-600 border focus:outline-none border-red-600 font-semibold rounded-full shadow-md hover:ring-2 hover:ring-red-400 hover:ring-opacity-75;
     }

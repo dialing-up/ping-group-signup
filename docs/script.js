@@ -152,18 +152,41 @@ function clicker(id, style){
 }
 
 const url = new URL(window.location.href);
-    const cred = url.hash.replace('#', '').split('&').reduce((prev, item) => {
-        return Object.assign({[item.split('=')[0]]: item.split('=')[1]}, prev);
-      }, {});
-    console.log(cred);
-    let access = String(cred.access_token);
+const cred = url.hash.replace('#', '').split('&').reduce((prev, item) => {
+    return Object.assign({[item.split('=')[0]]: item.split('=')[1]}, prev);
+    }, {});
+console.log(cred);
+let access = String(cred.access_token);
+let selectlist = [];
 
 function submit(){
     //read();
+    let submitlist = document.getElementById("alerted");
+    submitlist.classList.toggle("hidden");
+    let i4 = document.getElementById("arrow");
+    i4.classList.add("hidden");
+    let i1 = document.getElementById("processing");
+    i1.classList.toggle("hidden");
+    let node1 = document.getElementById("exectext");
+    node1.textContent = "Processing";
+    let node2 = document.getElementById("exec");
+    node2.disabled = true;
+    node2.classList.remove("bg-blue-400");
+    node2.classList.add("bg-red-400");
+    node2.classList.add("cursor-not-allowed");
     const list = document.querySelectorAll('.SELECTED');
     for (let item of list) {
-        console.log(String(item.getAttribute("id")));
+        let selectitem = String(item.getAttribute("id")).replace("_","-");
+        selectlist.push(selectitem);
+        post(selectitem);
     }
+    node2.classList.remove("bg-red-400");
+    node2.classList.add("bg-green-400");
+    node1.textContent = "Finished";
+    i1.classList.toggle("hidden");
+    let i2 = document.getElementById("finished");
+    i2.classList.toggle("hidden");
+    console.log(selectlist);
 }
 
 function read(){
@@ -190,18 +213,31 @@ function read(){
     });
 }
 
-function post(){
-    let message ={
+function change(){
+    
+    
+    
+    
+    let i3 = document.getElementById("alerted");
+    i3.classList.toggle("hidden");
+    
+}
+
+function post(ping){
+    let node2 = document.getElementById("submitlist");
+    let li = document.createElement("li");
+    let message = {
         api_type: "json",
-        subject: "ADD yourself to group SCI-FI",
-        text: "addtogroup SCI-FI",
+        subject: "ADD yourself to group " + String(ping),
+        text: "addtogroup " + String(ping),
         to: "groupbot"
     };
     let query = ""
-    for (let d in message)
+    for (let d in message){
          query += encodeURIComponent(d) + '=' + 
             encodeURIComponent(message[d]) + '&'
-     fetch('https://oauth.reddit.com/api/compose?'+query,{
+    }
+    fetch('https://oauth.reddit.com/api/compose?'+query,{
         method: "POST",
         mode: "cors",
         headers: {"Authorization": "bearer " + access }
@@ -215,9 +251,15 @@ function post(){
     }).then(function (data) {
         // This is the JSON from our response
         console.log(data);
+        li.className = "text-green-600";
+        li.textContent = "Message sent to add to group " + ping;
+        node2.appendChild(li);
     }).catch(function (err) {
         // There was an error
         console.warn('Something went wrong.', err);
+        li.className = "text-red-600";
+        li.textContent = "Failed to send message to add to group " + ping;
+        node2.appendChild(li);
     });   
 }
 
