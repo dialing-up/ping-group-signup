@@ -151,6 +151,7 @@ function clicker(id, style){
     id.classList.toggle("SELECTED");
 }
 
+//getting the credentials
 const url = new URL(window.location.href);
 const cred = url.hash.replace('#', '').split('&').reduce((prev, item) => {
     return Object.assign({[item.split('=')[0]]: item.split('=')[1]}, prev);
@@ -180,6 +181,7 @@ function submit(){
         selectlist.push(selectitem);
         post(selectitem);
     }
+    setTimeout(function(){
     node2.classList.remove("bg-red-400");
     node2.classList.add("bg-green-400");
     node1.textContent = "Finished";
@@ -187,6 +189,7 @@ function submit(){
     let i2 = document.getElementById("finished");
     i2.classList.toggle("hidden");
     console.log(selectlist);
+    }, 500);
 }
 
 function read(){
@@ -211,16 +214,6 @@ function read(){
         let node = document.getElementById("username");
         node.textContent = "Something went wrong";
     });
-}
-
-function change(){
-    
-    
-    
-    
-    let i3 = document.getElementById("alerted");
-    i3.classList.toggle("hidden");
-    
 }
 
 function post(ping){
