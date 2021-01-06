@@ -1,4 +1,49 @@
 // object lists of all ping groups
+/*let policy = {
+    ALTRUISM	Charity, volunteering, donation, and more
+    BLUE-DOGS	For Blue Dog Coalition democrats
+    CANLIB	Discussion of Canada's liberal parties
+    DOWNBALLOT	For downballot races in the US
+    DEMOCRACY	For discussing democratization around the world (not the game)
+    DEMS	US Democratic Party discussion
+    ECO	Environmentalism
+    ELECTIONS	For discussion of elections, especially international ones
+    FEMINISTS	Feminism and women's issues
+    FOREIGN-POLICY	Doves and Hawks (Formerly INTERVENE)
+    GEORGIST	Adherents of Georgism
+    HEALTH-POLICY	The business of saving lives
+    IMMIGRATION	Immigration & open borders
+    INTERNATIONAL-RELATIONS	For academic-type discussion of International Relations (IR)
+    LABOR	Labor issues including unions and minimum wage
+    LAW	Law
+    MARKETS	"Because /r/wallstreetbets is for shitposts and /r/investing is boring"
+    MILITARY	Military matters
+    PIDGIN	Senate Judicial Committee discussion
+    RADXC	Radical Exchange / Radical Markets
+    RINO	For refugees of the GOP
+    SNEK	For the libertarian-minded
+    TAX	Taxes
+    YIMBY	Urban development, infrastructure, zoning and more
+};*/
+/*
+let demo = {
+    BALD	For the bald and balding
+    CHILD	For the literal children of NL
+    CHRISTIAN	Christians of NL
+    FEMALE	The women of NL
+    GEFILTE	Jews and discussion of Judaism
+    ISLAM	Muslims and discussion of Islam
+    LGBT	LGBT issues
+    OVER25	The elderly of NL
+    
+    RURAL	🤠🌽 For the density-challenged 👩‍🌾 👨‍🌾
+    SHORT	For the vertically-challenged and their allies
+    TALL	For the lanklets
+};
+
+
+
+*/
 
 let games = {
     AMONG_US: "Among Us",
@@ -56,6 +101,7 @@ let school = {
     MATHEMATICS:"Mathematics",
     MUN:"Model United Nations",
     PHILOSOPHY:"Philosophy",
+    PHD: "PHDs",
     STEM:"STEM",
     TEACHERS:"Teachers"
 };
