@@ -7,21 +7,109 @@
     <title>Ping Groups Signup</title>
 </head>
 <body class="bg-gradient-to-r from-red-400 to-yellow-400">
-  <!--  <nav class="fixed w-full z-10 top-0">
+    <!--header-->
+    <nav class="fixed w-full z-10 top-0">
         <div class="flex mx-auto divide-x divide-black shadow-xl rounded-b-lg bg-white max-w-min sm:max-w-md p-1 justify-center items-center">
-            <a href="https://neoliberalproject.org/"><img src="logo.png" alt="Neoliberal Project" id="logo" class="p-1"></a>
+            <a href="https://www.reddit.com/r/neoliberal/"><img src="pagecontent/logo.png" alt="Neoliberal Project" id="logo" class="p-1"></a>
+            <a href="https://www.reddit.com/r/neoliberal/"><div class="font-bold text-red-500 sm:text-xl text-lg p-1 mr-1 whitespace-nowrap text-center">r/neoliberal</div></a>
             <div class="font-light sm:text-xl text-lg p-1 mr-1 whitespace-nowrap text-center">Ping Groups<span class="hidden sm:inline">&nbsp;</span><br class="sm:hidden">Signup</div>
         </div>
-    </nav>-->
-    <div class="flex items-center justify-center h-screen">
-    
-        <div class="bg-green-600 text-white font-bold rounded-lg border shadow-lg p-10">
-            <div class="mx-auto w-max my-2"><a class="btn_green" href="
-                https://www.reddit.com/api/v1/authorize.compact?client_id=a5B2-eDepQJCuA&response_type=token&state=Q46gsRts&redirect_uri=https://dialing-up.github.io/ping-group-signup/signup.html&duration=temporary&scope=privatemessages%20identity
-                ">Signup</a></div>
+    </nav>
+    <!--body-->
+    <div class="md:flex justify-center h-max relative pt-20">
+        <!--Left Side-->
+        <div>
+            <div class="py-2 px-5 md:m-2 my-2 mx-auto bg-white rounded-lg shadow-xl max-w-sm relative" id="picbox">
+                <div class = "text-xl w-full font-bold text-center">About</div>
+                <div>
+                    <b>Pings</b> are a way of sending messages to a group of people within /r/Neoliberal. We have groups for a variety of topics (both political and non-political) that users can join.<br>When someone writes <span class="text-red-600 font-semibold">!ping GROUP</span> in a comment, everyone subscribed to <span class="text-red-600 font-semibold">GROUP</span> will get a message from <span class="text-blue-600 font-semibold">/u/groupbot</span> containing a link to that comment.<br>
+                    To ping a group, you must first be subscribed to that group.
+                </div>
+            </div>
+            <div class="py-2 px-5 md:m-2 my-2 mx-auto bg-white rounded-lg shadow-xl max-w-sm relative" id="picbox">
+                <div class = "text-xl w-full font-bold text-center">Managing Subscriptions</div>
+                <div>
+                    To subscribe to a group, click the login button at the bottom of the page and then select the groups you want on the signup page and press submit. This will send private messages to /u/groupbot with the commands to subscribe you to those groups.<br>
+
+                    Alternatively, you can write the message manually. To subscribe to GROUP, send a message to /u/groupbot with "addtogroup GROUP" in the body of the message. Please note that Reddit Chat does not work, you must use private messages.
+                </div>
+            </div>
+            <div class="py-2 px-5 md:m-2 my-2 mx-auto bg-white rounded-lg shadow-xl max-w-sm relative" id="picbox">
+                <div class = "text-xl w-full font-bold text-center">Rules / Etiquette & Tips</div>
+                <div>
+                    <ul class="list-disc list-inside">
+                        <li>If you see a ping you think breaks the rules, please report it and message the moderators</li>
+                        <li><b>Don't Spam:</b> Listen to the group and try to only send pings others want to receive</li>
+                        <li><b>Don't Brigade:</b> Avoid posting links to subreddits that are likely to cause drama. Absolutely do not encourage participation in any linked threads</li>
+                        <li><b>Don't Delete Pings:</b> Getting a link to a bad ping is still less obnoxious than getting a link to a deleted comment</li>
+                        <li>No one except the mods can see what groups you're subscribed to</li>
+                        <li>Only one ping can be sent per comment</li>
+                        <li>/u/groupbot does not pay attention to posts that are edited. If you misspell a group name, you'll need to delete the comment and post another one with the correct spelling</li>
+                        <li>If you would like a ping group to be created, make a post in /r/metaNL</li>
+                        <li>This bot is open source and development is ongoing. See our issues page for upcoming features and bug fixes</li>
+                        <li>You can also use our ping groups on /r/metaNL</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        
-      </div>
-    
+        <!--Right Side-->
+        <div>
+            <div class="p-2 bg-white rounded-lg shadow-xl md:m-2 my-2 mx-auto max-w-sm relative font-mono text-xl" id="introbox">
+                <div class ="my-10"><img src="pagecontent/post.jpg" class="rounded-2xl mx-5 max-w-xs transform -rotate-6"></div>
+                <img src="pagecontent/bendright.svg" id="bendright">
+                <div class="my-10"><img src="pagecontent/comment.jpg" class="rounded-2xl mx-5 max-w-xs transform rotate-6"></div>
+                <img src="pagecontent/bendleft.svg" id="bendleft">
+                <div class="my-10"><img src="pagecontent/pinged.PNG" class="rounded-2xl mx-5 max-w-xs transform -rotate-6"></div>
+            </div>
+            <div class="flex justify-around">
+                <span class="inline-flex rounded-md shadow-sm mb-2">
+                    <a href="
+        https://www.reddit.com/api/v1/authorize.compact?client_id=a5B2-eDepQJCuA&response_type=token&state=Q46gsRts&redirect_uri=https://dialing-up.github.io/ping-group-signup/signup.html&duration=temporary&scope=privatemessages%20identity
+        ">
+                    <button id="exec" type="button" class="inline-flex items-center px-4 py-2 border border-red-600 hover:border-transparent leading-6 font-medium rounded-md text-red-600 hover:text-white bg-white hover:bg-red-600">
+                        <span>Login to your&nbsp;</span>
+                        <img id="arrow" src="pagecontent/reddit1.svg" height="24px" width="80px" class="mr-2 mt-1">
+                        <span>account</span>
+                    </button>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <footer class="w-full">
+        <div class="bg-white text-center justify-center items-center p-5 mx-auto shadow-xl rounded-t-lg sm:max-w-sm max-w-min whitespace-nowrap">
+        Made by <a href="https://twitter.com/ReadyToDial" class="font-semibold text-red-500">@ReadyToDial</a> with <a href="https://tailwindcss.com/" class="font-semibold text-blue-600">Tailwind CSS</a>
+        </div>
+    </footer>
 </body>
+<style>
+    #logo{
+        max-width: 280px;
+        max-height:70px;
+        min-width: 40px;
+        min-height: 10px;
+    }
+    #bendright{
+        position: absolute;
+        top: 268px;
+        left: 246px;
+        transform: rotate(50deg);
+        width: 3.5rem;
+    }
+    #bendleft{
+        position: absolute;
+        top: 715px;
+        left: 70px;
+        transform: rotate(120deg);
+        width: 3.5rem;
+    }
+    #picbox{
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23ed9795' fill-opacity='0.15' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    #introbox{
+        background-color: #ecedc8;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ebbf4a' fill-opacity='0.42'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+</style>
 </html>

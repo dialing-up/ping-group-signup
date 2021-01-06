@@ -160,6 +160,7 @@ console.log(cred);
 let access = String(cred.access_token);
 let selectlist = [];
 
+//function to read all the items selected and send them to group bot. Also changes the look of the submit button
 function submit(){
     //read();
     let submitlist = document.getElementById("alerted");
@@ -192,8 +193,9 @@ function submit(){
     }, 500);
 }
 
+
+//function to read the username
 function read(){
-    //get username
     fetch('https://oauth.reddit.com/api/v1/me',{
         mode: "cors",
         headers: {"Authorization": "bearer " + access }
@@ -216,6 +218,7 @@ function read(){
     });
 }
 
+//function to send one message to groupbot
 function post(ping){
     let node2 = document.getElementById("submitlist");
     let li = document.createElement("li");
