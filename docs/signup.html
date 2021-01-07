@@ -17,46 +17,62 @@
             <div class="font-light sm:text-xl text-lg p-1 mr-1 whitespace-nowrap text-center">Ping Groups<span class="hidden sm:inline">&nbsp;</span><br class="sm:hidden">Signup</div>
         </div>
     </nav>
+    <!--main body-->
     <div class="flex justify-center h-max relative pt-20">
         <div>
+            <!--Username-->
             <div class="p-2 bg-white rounded-lg shadow-xl m-2 max-w-5xl text-center font-mono text-xl" id="welcomebox">
                 <span id="username"></span>
             </div>
+            <!--Other countries-->
             <div class="p-2 bg-white rounded-lg shadow-xl m-2 max-w-5xl" id="countrybox">
                 <div class="font-thin text-xl pl-4">
                     (If not from the United States) <span class="font-medium">Country, Region or Continent</span>
                 </div>
                 <div id="countries" class="flex flex-wrap justify-center"></div>
             </div>
+            <!--US States-->
             <div class="p-2 bg-white rounded-lg shadow-xl m-2 max-w-5xl" id="statebox">
                 <div class="font-thin text-xl pl-4">
                     (If from the United States) <span class="font-medium">State</span>
                 </div>
                 <div id="states" class="flex flex-wrap justify-center"></div>
             </div>
+            <!--to print username after top sections load-->
             <script>
                 read();
             </script>
+            <!--General Interests-->
             <div class="p-2 bg-white rounded-lg shadow-xl m-2 max-w-5xl" id="generalbox">
                 <div class="font-medium text-xl pl-4">
                     General Interests
                 </div>
                 <div id="gen"></div>
             </div>
+            <!--Academics and School-->
             <div class="p-2 bg-white rounded-lg shadow-xl m-2 max-w-5xl" id="schoolbox">
                 <div class="font-medium text-xl pl-4">
                     Academics & School
                 </div>
                 <div id="schooling"></div>
             </div>
+            <!--Games-->
             <div class="p-2 bg-white rounded-lg shadow-xl m-2 max-w-5xl" id="gamebox">
                 <div class="font-medium text-xl pl-4">
                     Games
                 </div>
                 <div id="games"></div>
             </div>
+            <!--interests-->
+            <div class="p-2 bg-white rounded-lg shadow-xl m-2 max-w-5xl" id="interestbox">
+                <div class="font-medium text-xl pl-4">
+                    Interests and Fun
+                </div>
+                <div id="interests"></div>
+            </div>
         </div>  
     </div>
+    <!--Submit button and result list-->
     <div class="flex justify-around">
         <!-- component -->
         <div class="bg-blue-100 border-l-4 border-blue-500 mb-2 p-4 hidden" id="alerted">
@@ -87,6 +103,7 @@
 </body>
 <script>
     tagCloud("gen", general, "btn_green");
+    tagCloud("interests", interests, "btn_red");
     tagCloud("schooling", school, "btn_red");
     tagCloud("games", games, "btn_green");
     cardCloud("countries", countrylist, "conbox");
@@ -142,6 +159,10 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         background-color: aliceblue;
         background-image: url(pagecontent/game.svg);
         background-repeat: repeat;
+    }
+    #interestbox{
+        background-color: #e5dbdb;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23f18381' fill-opacity='0.3'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
     }
 </style>
 </html>

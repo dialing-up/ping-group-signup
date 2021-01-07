@@ -1,5 +1,7 @@
 // object lists of all ping groups
-/*let policy = {
+/*
+//cards
+let policy = {
     ALTRUISM	Charity, volunteering, donation, and more
     BLUE-DOGS	For Blue Dog Coalition democrats
     CANLIB	Discussion of Canada's liberal parties
@@ -26,6 +28,7 @@
     YIMBY	Urban development, infrastructure, zoning and more
 };*/
 /*
+//buttons with emoji
 let demo = {
     BALD	For the bald and balding
     CHILD	For the literal children of NL
@@ -40,8 +43,96 @@ let demo = {
     SHORT	For the vertically-challenged and their allies
     TALL	For the lanklets
 };
+//special cards
+let special = {
+    ANNOUNCEMENTS	Announcements pertaining to the subreddit or the Neoliberal Project, eg. podcast episodes and meetups
+    MICSPAM	Occasionally moderators run a Discord voice chat, join this group to be notified when it's live
+}
 
+let sports = {
+    BASEBALL	Baseball
+    CBB	College basketball
+    CFB	College football
+    FFB	Fantasy Football
+    MMA	MMA (including, but not limited to, UFC)
+    MOTO	Motorsports incl. F1, Formula E and other vroom vroom that go fast
+    PRO-WRESTLING	Professional wrestling, including WWE
+    NBA	Basketball
+    NFL	American football
+    NHL	Hockey
+    SOCCER	Soccer / Association football
+}
+let music = {
+    CLASSICAL	Classical music
+    ELECTRONICA	For electronic music outside mainstream EDM
+    FOLK	Folk, Country, Blues, and Americana music
+    INDIE	Indie Music
+    JAZZ	Jazz music
+    METAL	Metal music
+    MUSICIAN	Musicians, music making, theory, performance, and more
+    OONTS	For EDM and good times
+    POP	Pop music
+    PRETENTIOUS	Prog Metal, Prog Rock, Math Rock, Post Rock and such
+    PUNK	Punk music
+    RAP	Rap music
+    WORLD-MUSIC	World Music
+}
 
+let tv = {
+    ASOIAF	A Song of Ice and Fire / Game of Thrones
+    AVATAR	The Last Airbender (ATLA) and The Legend of Korra. No blue aliens
+    EXPANSE	The Expanse
+    HORROR	Fictional horror stories and allegedly true scary stories
+    MOVIES	Movies, film, and cinema
+    NORTHERNLION	NorthernLion YouTube channel
+    READING	Books, literature, short stories, and whatever else you read.
+    SANDERSON	Brandon Sanderson's books
+    SCI-FI	Science Fiction
+    SNL	Saturday Night Live
+    SURVIVOR	Survivor
+    THEGOODPLACE	The Good Place
+    TREK	Star Trek
+    TV	General television discussion
+    WEEBS	Anime, Manga and assorted weeb stuff
+    WEST-WING	The West Wing
+}
+
+Online
+Group name	Description
+ASK-NL	For asking /r/neoliberal questions
+BESTOF	For the best content on /r/neoliberal
+NL-ELECTS	In which /r/Neoliberal votes in mock elections
+PMG-LIST	For high-effort papermarioguy02 comments (incl. econ, baseball, videogames)
+PREZPOLL	In which /r/Neoliberal rates presidencies throughout history
+READ-ANOTHER-BOOK	/u/PaulaTreides0's personal shitposting ping
+SHITPOSTERS	Helping each other craft quality memes to reach /r/All
+SPECIES	/u/p00bix's "Neoliberal evolves a species" series
+TACOTUBE	Shillpilling the masses of YouTube
+WIKI	Wikipedia
+//cards
+News
+Group name	Description
+EXTREMISM	For discussion of extremist groups, including insurgencies
+FIVEY	For discussion of political polling
+NPR	News for the city-slickin, snotty-sneerin, latte-sippin, liberal-leanin
+GOOD-NEWS	Good News
+//buttons
+People & Life
+Interests & Fun
+
+    //buttons	
+    Health & Wellness
+    Group name	Description
+    ACCOUNTABILITY	Stronger together
+    BIKE	Bicycling
+    COOKING	Chefs and hungrybois
+    CORONAVIRUS	Coronavirus, COVID-19, SARS-CoV-2
+    FAMILY	Family
+    FITNESS	Fitness
+    FOX-ANON	Support group for those whose loved ones have gone off the Fox News deep end.
+    INSOMNIA	For the sleep-deprived of NL
+    VEGAN	Vegans
+}
 
 */
 
@@ -153,6 +244,26 @@ let statelist = {
     USA_UT:	"Utah",
     USA_WA:	"Washington state",
     USA_WI:	"Wisconsin"
+}
+
+let interests = {
+    ALCOHOL:	"Alcohol",
+    ALTHISTORY:	"Alternative history",
+    ANDROID: "Android OS",
+    COFFEE:	"Coffee",
+    DOG:	"Dogs",
+    FASHION:	"Fashion",
+    GARAND:	"Guns and firearms",
+    KITTY:	"Cats",
+    OUTDOORS:	"Outdoor activities (fishing, hiking, camping, etc.)",
+    PANDA:	"Panda Bears",
+    PC_BUILDING:	"Building PCs",
+    RELIGION:	"Religion",
+    SPACEFLIGHT:	"Spaceflight and Spacecraft",
+    TECH:	"Technology",
+    TRAVEL:	"Travel",
+    WEED:	"Cannabis",
+    WRITING: "Writing"
 }
 
 //functions
