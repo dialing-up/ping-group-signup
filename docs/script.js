@@ -1,101 +1,6 @@
 // object lists of all ping groups
 /*
 //cards
-let policy = {
-    ALTRUISM	Charity, volunteering, donation, and more
-    BLUE-DOGS	For Blue Dog Coalition democrats
-    CANLIB	Discussion of Canada's liberal parties
-    DOWNBALLOT	For downballot races in the US
-    DEMOCRACY	For discussing democratization around the world (not the game)
-    DEMS	US Democratic Party discussion
-    ECO	Environmentalism
-    ELECTIONS	For discussion of elections, especially international ones
-    FEMINISTS	Feminism and women's issues
-    FOREIGN-POLICY	Doves and Hawks (Formerly INTERVENE)
-    GEORGIST	Adherents of Georgism
-    HEALTH-POLICY	The business of saving lives
-    IMMIGRATION	Immigration & open borders
-    INTERNATIONAL-RELATIONS	For academic-type discussion of International Relations (IR)
-    LABOR	Labor issues including unions and minimum wage
-    LAW	Law
-    MARKETS	"Because /r/wallstreetbets is for shitposts and /r/investing is boring"
-    MILITARY	Military matters
-    PIDGIN	Senate Judicial Committee discussion
-    RADXC	Radical Exchange / Radical Markets
-    RINO	For refugees of the GOP
-    SNEK	For the libertarian-minded
-    TAX	Taxes
-    YIMBY	Urban development, infrastructure, zoning and more
-};*/
-/*
-//buttons with emoji
-let demo = {
-    BALD	For the bald and balding
-    CHILD	For the literal children of NL
-    CHRISTIAN	Christians of NL
-    FEMALE	The women of NL
-    GEFILTE	Jews and discussion of Judaism
-    ISLAM	Muslims and discussion of Islam
-    LGBT	LGBT issues
-    OVER25	The elderly of NL
-    
-    RURAL	🤠🌽 For the density-challenged 👩‍🌾 👨‍🌾
-    SHORT	For the vertically-challenged and their allies
-    TALL	For the lanklets
-};
-//special cards
-let special = {
-    ANNOUNCEMENTS	Announcements pertaining to the subreddit or the Neoliberal Project, eg. podcast episodes and meetups
-    MICSPAM	Occasionally moderators run a Discord voice chat, join this group to be notified when it's live
-}
-
-let sports = {
-    BASEBALL	Baseball
-    CBB	College basketball
-    CFB	College football
-    FFB	Fantasy Football
-    MMA	MMA (including, but not limited to, UFC)
-    MOTO	Motorsports incl. F1, Formula E and other vroom vroom that go fast
-    PRO-WRESTLING	Professional wrestling, including WWE
-    NBA	Basketball
-    NFL	American football
-    NHL	Hockey
-    SOCCER	Soccer / Association football
-}
-let music = {
-    CLASSICAL	Classical music
-    ELECTRONICA	For electronic music outside mainstream EDM
-    FOLK	Folk, Country, Blues, and Americana music
-    INDIE	Indie Music
-    JAZZ	Jazz music
-    METAL	Metal music
-    MUSICIAN	Musicians, music making, theory, performance, and more
-    OONTS	For EDM and good times
-    POP	Pop music
-    PRETENTIOUS	Prog Metal, Prog Rock, Math Rock, Post Rock and such
-    PUNK	Punk music
-    RAP	Rap music
-    WORLD-MUSIC	World Music
-}
-
-let tv = {
-    ASOIAF	A Song of Ice and Fire / Game of Thrones
-    AVATAR	The Last Airbender (ATLA) and The Legend of Korra. No blue aliens
-    EXPANSE	The Expanse
-    HORROR	Fictional horror stories and allegedly true scary stories
-    MOVIES	Movies, film, and cinema
-    NORTHERNLION	NorthernLion YouTube channel
-    READING	Books, literature, short stories, and whatever else you read.
-    SANDERSON	Brandon Sanderson's books
-    SCI-FI	Science Fiction
-    SNL	Saturday Night Live
-    SURVIVOR	Survivor
-    THEGOODPLACE	The Good Place
-    TREK	Star Trek
-    TV	General television discussion
-    WEEBS	Anime, Manga and assorted weeb stuff
-    WEST-WING	The West Wing
-}
 
 Online
 Group name	Description
@@ -109,34 +14,11 @@ SHITPOSTERS	Helping each other craft quality memes to reach /r/All
 SPECIES	/u/p00bix's "Neoliberal evolves a species" series
 TACOTUBE	Shillpilling the masses of YouTube
 WIKI	Wikipedia
-//cards
-News
-Group name	Description
-EXTREMISM	For discussion of extremist groups, including insurgencies
-FIVEY	For discussion of political polling
-NPR	News for the city-slickin, snotty-sneerin, latte-sippin, liberal-leanin
-GOOD-NEWS	Good News
-//buttons
-People & Life
-Interests & Fun
-
-    //buttons	
-    Health & Wellness
-    Group name	Description
-    ACCOUNTABILITY	Stronger together
-    BIKE	Bicycling
-    COOKING	Chefs and hungrybois
-    CORONAVIRUS	Coronavirus, COVID-19, SARS-CoV-2
-    FAMILY	Family
-    FITNESS	Fitness
-    FOX-ANON	Support group for those whose loved ones have gone off the Fox News deep end.
-    INSOMNIA	For the sleep-deprived of NL
-    VEGAN	Vegans
-}
 
 */
 
 let games = {
+    GAMING: "🎮 Gaming (General)",
     AMONG_US: "Among Us",
     ANIMAL_CROSSING:"Animal Crossing",
     BIOWARE:"Bioware Games",
@@ -162,16 +44,18 @@ let games = {
 };
 
 let general ={
-    HORROR: "😱 Horror",
-    READING: "📚 Reading",
-    MOVIES: "📽️ Movies",
-    SCI_FI: "🤖 Sci-Fi",
-    TV: "📺 TV",
-    GAMING: "🎮 Gaming",
-    WEEBS: "(✿◠‿◠) Anime and Manga",
+    CHILD:	"👶 Literal children (<18)",
+    OVER25:	"👴 The elderly of NL (>25)",
+    CHRISTIAN:	"✝️ Christian",
+    GEFILTE: "✡️ Jewish",
+    ISLAM:	"☪️ Muslim",
     LGBT: "🏳️‍🌈 LGBT",
+    FEMALE:	"👩 Women of NL",
+    RURAL:	"👩‍🌾 👨‍🌾 Rural",
+    SHORT:	"Short",
+    TALL:	"Tall",
+    BALD:	"👨‍🦲 Bald",     
 };
-
 
 let school = {
     AI:"Artificial Intelligence",
@@ -244,7 +128,33 @@ let statelist = {
     USA_UT:	"Utah",
     USA_WA:	"Washington state",
     USA_WI:	"Wisconsin"
-}
+};
+
+let policy = {
+    ALTRUISM:	"Altruism",
+    BLUE_DOGS:	"Blue Dog Democrats",
+    CANLIB:	"Canadian Liberals",
+    DOWNBALLOT:	"US Downballot races",
+    DEMOCRACY: "Democracy",
+    DEMS:	"Democratic Party",
+    ECO: "Ecology",
+    ELECTIONS:	"Elections (Worldwide)",
+    FEMINISTS:	"Feminism",
+    FOREIGN_POLICY:	"Foreign Policy",
+    GEORGIST:	"Georgism",
+    HEALTH_POLICY:	"Health Policy",
+    IMMIGRATION: "Immigration",
+    INTERNATIONAL_RELATIONS: "International Relations",
+    LABOR: "Labor issues",
+    LAW: "Law",
+    MARKETS:	"Markets",
+    MILITARY:	"Military",
+    RADXC:	"Radical Exchange",
+    RINO: "RINO",
+    SNEK: "Libertarian",
+    TAX:	"Taxes",
+    YIMBY:	"YIMBY"
+};
 
 let interests = {
     ALCOHOL:	"Alcohol",
@@ -264,8 +174,79 @@ let interests = {
     TRAVEL:	"Travel",
     WEED:	"Cannabis",
     WRITING: "Writing"
+};
+
+let news = {
+    EXTREMISM:	"Extremism",
+    FIVEY: "Political Polling",
+    NPR:	"NPR",
+    GOOD_NEWS:	"Good News"
 }
 
+let health = {
+    ACCOUNTABILITY:	"Health Accountability",
+    BIKE:	"Bicycling",
+    COOKING:	"Cooking",
+    CORONAVIRUS:	"Coronavirus",
+    FAMILY:	"Family",
+    FITNESS:	"Fitness",
+    FOX_ANON:	"Fox News Anonymous",
+    INSOMNIA:	"Insomnia",
+    VEGAN:	"Vegans"
+};
+
+let tv = {
+    TV: "📺 TV (General)",
+    HORROR: "😱 Horror",
+    MOVIES: "📽️ Movies",
+    READING: "📚 Reading",
+    SCI_FI: "🤖 Sci-Fi",
+    WEEBS: "(✿◠‿◠) Anime and Manga",
+    ASOIAF:	"A Song of Ice and Fire / Game of Thrones",
+    AVATAR:	"The Last Airbender/The Legend of Korra",
+    EXPANSE:	"The Expanse",
+    SANDERSON:	"Brandon Sanderson's books",
+    SNL:	"Saturday Night Live",
+    SURVIVOR:	"Survivor",
+    THEGOODPLACE:	"The Good Place",
+    TREK:	"Star Trek", 
+    WEST_WING:	"The West Wing"
+}
+
+let sports = {
+    BASEBALL: "Baseball",
+    CBB: "College Basketball",
+    CFB: "College Football",
+    FFB: "Fantasy Football",
+    MMA: "MMA",
+    MOTO: "Motorsports", 
+    PRO_WRESTLING: "Professional wrestling, incl. WWE",
+    NBA: "NBA",
+    NFL: "NFL",
+    NHL: "NHL",
+    SOCCER:	"Soccer"
+}
+
+let music = {
+    CLASSICAL:	"Classical",
+    ELECTRONICA:	"Electronic music outside mainstream EDM",
+    FOLK:	"Folk, Country, Blues, and Americana",
+    INDIE:	"Indie",
+    JAZZ:	"Jazz",
+    METAL:	"Metal",
+    MUSICIAN:	"Group for Musicians",
+    OONTS:	"EDM and clubs",
+    POP:	"Pop",
+    PRETENTIOUS:	"Prog Metal, Prog Rock etc",
+    PUNK:	"Punk",
+    RAP:	"Rap",
+    WORLD_MUSIC:	"World Music"
+};
+
+let special = {
+    ANNOUNCEMENTS:	"Announcements pertaining to the subreddit or the Neoliberal Project, eg. podcast episodes and meetups",
+    MICSPAM:	"Occasionally moderators run a Discord voice chat, join this group to be notified when it's live"
+}
 //functions
 
 //function to generate clickable cards with prictures
@@ -418,51 +399,4 @@ function post(ping){
 
 //hover:text-white hover:bg-gradient-to-r hover:from-red-400 hover:to-yellow-400
 
- /*   axios('https://oauth.reddit.com/api/v1/me',{
-        method: 'GET',
-        headers: {"Authorization": "bearer " + access}
-    })
-    .then(function (response) {
-    // handle success
-    console.log(response);
-    })
-    .catch(function (error) {
-    // handle error
-    console.log(error);
-    })
-    .then(function () {
-    // always executed
-    });
-    axios.post('https://oauth.reddit.com/api/compose', {
-        api_type: "json",	
-        subject: "Add yourself to group SCIFI",    
-        text: "addtogroup SCIFI",
-        to: "groupbot"
-    },
-    {
-        "Authorization": "bearer " + access
-    })
-    .then(function (response) {
-        console.log(response.data);
-    })
-    .catch(function (error) {
-        console.log(error);
-    }); */ 
-
-/*  
-
-https://not-an-aardvark.github.io/snoowrap/snoowrap-v1.min.js
-
-const generateRandomString = (length=6)=>Math.random().toString(20).substr(2, length)
-
-<div class="flex justify-around">
-    <span class="inline-flex rounded-md shadow-sm">
-      <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-rose-600 hover:bg-rose-500 focus:border-rose-700 active:bg-rose-700 transition ease-in-out duration-150 cursor-not-allowed" disabled>
-        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-        </svg>
-        Processing
-      </button>
-    </span>
-  </div> */
+//const generateRandomString = (length=6)=>Math.random().toString(20).substr(2, length)

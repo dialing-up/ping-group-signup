@@ -28,4 +28,10 @@
   .conbox_clicked{
     @apply rounded-lg shadow-2xl text-white bg-gradient-to-t from-blue-400 to-green-400 select-none p-2 m-2 w-20 sm:w-28 hover:ring-2 hover:ring-red-400 hover:ring-opacity-75;
   }
+  .usbox{
+    @apply rounded-lg shadow-2xl bg-white p-2 m-2 w-20 sm:w-28 hover:ring-2 select-none hover:ring-blue-400 hover:ring-opacity-75;
+  }
+  .usbox_clicked{
+    @apply rounded-lg shadow-2xl text-white bg-gradient-to-tl from-red-500 to-blue-800 select-none p-2 m-2 w-20 sm:w-28 hover:ring-2 hover:ring-red-400 hover:ring-opacity-75;
+  }
 }
